@@ -1,0 +1,30 @@
+﻿<UserControl xmlns:my="clr-namespace:DevExpress.AgDataGrid;assembly=DevExpress.AgDataGrid.v9.3"
+                       x:Class="AgDataGrid_CustomSummary.MainPage"
+                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                       xmlns:ageditors="clr-namespace:DevExpress.AgEditors.Settings;assembly=DevExpress.AgEditors.v9.3"
+                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                       mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+    <Grid x:Name="LayoutRoot">
+        <my:AgDataGrid x:Name="grid" ShowTotals="True"
+                       CustomSummary="grid_CustomSummary">
+            <my:AgDataGrid.Columns>
+                <my:AgDataGridColumn FieldName="CompanyName" Width="180"/>
+                <my:AgDataGridColumn FieldName="UnitPrice">
+                    <my:AgDataGridColumn.EditSettings>
+                        <ageditors:TextEditSettings DisplayFormat="c2"/>
+                    </my:AgDataGridColumn.EditSettings>
+                </my:AgDataGridColumn>
+                <my:AgDataGridColumn FieldName="Quantity"/>
+            </my:AgDataGrid.Columns>
+            <my:AgDataGrid.TotalSummary>
+                <my:AgDataGridSummaryItem FieldName="UnitPrice"
+                                          DisplayFormat="c2"
+                                          SummaryType="Custom"
+                                          ShowInColumn="CompanyName"
+                                          Title="Total Price"/>
+            </my:AgDataGrid.TotalSummary>
+        </my:AgDataGrid>
+    </Grid>
+</UserControl>
