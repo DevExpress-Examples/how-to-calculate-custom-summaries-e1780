@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainPage.xaml](./CS/AgDataGrid_CustomSummary/MainPage.xaml) (VB: [MainPage.xaml.vb](./VB/AgDataGrid_CustomSummary/MainPage.xaml.vb))
+* [MainPage.xaml.cs](./CS/AgDataGrid_CustomSummary/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/AgDataGrid_CustomSummary/MainPage.xaml.vb))
+* [Products.cs](./CS/AgDataGrid_CustomSummary/Products.cs) (VB: [Products.vb](./VB/AgDataGrid_CustomSummary/Products.vb))
+<!-- default file list end -->
 # How to Calculate Custom Summaries
 
 
